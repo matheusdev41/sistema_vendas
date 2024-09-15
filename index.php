@@ -11,9 +11,9 @@
     <h2>Efetue o login</h2>
     <form id="form-login" action="login.php" method="POST">
         <?php if(isset($resultado) && $resultado["cod"] == 0): ?>
-        <div class="alert alert-danger">
-            <?php echo $resultado["msg"]; ?>
-        </div>
+            <div class="alert alert-danger">
+                <?php echo $resultado["msg"]; ?>
+            </div>
         <?php endif; ?>
         <input id="email" name="email" placeholder="Digite seu email" type="email"/>
         <br/><br>

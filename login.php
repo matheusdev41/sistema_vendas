@@ -16,10 +16,10 @@ try {
   //echo "Connected successfully";
 
   // 3. verificar se email e senha estão no BD
-  $stmt = $conn->prepare("SELECT id FROM user WHERE email=:email AND senha=md5(:senha)");
-  $stmt->bindParam(':email', $email, PDO::PARAM_STR);
-  $stmt->bindParam(':senha', $senha, PDO::PARAM_STR);
-  $stmt->execute();
+  $consulta = $conn->prepare("SELECT id FROM user WHERE email=:email AND senha=md5(:senha)");
+  $consulta->bindParam(':email', $email, PDO::PARAM_STR);
+  $consulta->bindParam(':senha', $senha, PDO::PARAM_STR);
+  $consulta->execute();
 
   // set the resulting array to associative
   $result = $stmt->fetchAll();
